@@ -1,0 +1,21 @@
+#!/bin/sh
+###
+# Installing curl and unzip
+###
+apk --no-cache --update add curl unzip
+###
+# Retrieving Packer
+###
+curl "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip" -o /tmp/packer.zip
+###
+# Unzip packer
+###
+unzip /tmp/packer.zip -d /usr/local/bin
+###
+# Remove temporary files
+###
+rm -rf /tmp/*
+###
+# Remove unused programs
+###
+apk del unzip
