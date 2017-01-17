@@ -1,6 +1,6 @@
-FROM alpine
+FROM alpine:3.5
 
-MAINTAINER Christophe van de Kerchove
+MAINTAINER FXinnovation
 
 VOLUME /data
 
