@@ -6,7 +6,7 @@ VOLUME /data
 
 WORKDIR /data
 
-ENV PACKER_VERSION=0.11.0
+ENV PACKER_VERSION=0.12.0
 
 ADD ./resources /resources
 
