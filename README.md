@@ -19,7 +19,7 @@ docker run --rm \
   [COMMAND_OPTIONS]
 ```
 
-Where [COMMAND_OPTIONS] are the actual command you wan to send to packer.
+Where [COMMAND_OPTIONS] are the actual commands you want to send to packer.
 
 Since the image's entrypoint is `packer` you don't need to specify it.
 
