@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-MAINTAINER FXinnovation
+MAINTAINER FXinnovation <cloudsquad@fxinnovation.com>
 
 VOLUME /data
 
