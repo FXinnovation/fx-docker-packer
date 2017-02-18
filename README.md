@@ -1,27 +1,17 @@
 # Packer
+[![](https://images.microbadger.com/badges/version/fxinnovation/packer.svg)](https://microbadger.com/images/fxinnovation/packer "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/fxinnovation/packer.svg)](https://microbadger.com/images/fxinnovation/packer "Get your own image badge on microbadger.com")
 ## Description
-This container contains packer from Hashicorp
-
-The image is based on alpine, it should be very lightweight.
+This image contains packer. The image is based on the official alpine image. It should be more lightweight this way.
 
 ## Tags
-We do publish a latest tag for this image since it is a build image. It allows our CI to always have the latest image with minimal maintenance.
-
-If you want to run a specific version of packer, please have a look at the other available tags.
-
-Our docker tags will follow the packer release versions since there is only packer in the container.
+We push a `latest` tag on this repository, to run an older version please checkout the different tags.
+We do not follow the packer release tags in the docker image tags. You can always find the packer version in the Dockerfile that was used to create the image or you can use the labels.
 
 ## Usage
-```
-docker run --rm \
-  -v $(pwd):/data \
-  fxinnovation/packer \
-  [COMMAND_OPTIONS]
-```
+`docker run --rm -v $(pwd):/data fxinnovation/packer help`
 
-Where [COMMAND_OPTIONS] are the actual commands you want to send to packer.
-
-Since the image's entrypoint is `packer` you don't need to specify it.
+## Labels
+We set labels on our images with additional information on the image. we follow the guidelines defined at http://label-schema.org/. Visit their website for more information about those labels.
 
 ## Comments & Issues
-If you have comments or detect an issue, please be adviced we don't check the docker hub comments. You can always contact us through the repository.
+If you have comments or detect an issue, please be advised we don't check the docker hub comments. You can always contact us through the repository.
