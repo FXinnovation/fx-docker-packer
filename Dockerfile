@@ -1,10 +1,14 @@
 FROM alpine:3.5
 
+ENV PACKER_VERSION=0.12.2
+
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+
 VOLUME /data
 
 WORKDIR /data
-
-ENV PACKER_VERSION=0.12.2
 
 ADD ./resources /resources
 
@@ -21,4 +25,8 @@ LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.vcs-url"="https://bitbucket.org/fxadmin/public-common-docker-packer" \
       "org.label-schema.vendor"="FXinnovation" \
       "org.label-schema.schema-version"="1.0.0-rc.1" \
-      "org.label-schema.applications.packer.version"=$PACKER_VERSION
+      "org.label-schema.applications.packer.version"=$PACKER_VERSION \
+      "org.label-schema.vcs-ref"=$VCS_REF \
+      "org.label-schema.version"=$VERSION \
+      "org.label-schema.build-date"=$BUILD_DATE \
+      "org.label-schema.usage"="docker run --rm $(pwd):/data fxinnovation/packer help"
