@@ -3,7 +3,9 @@ set -ex
 ###
 # Installing curl and unzip
 ###
-apk --no-cache --update add curl unzip
+apk add --no-cache \
+  curl=$CURL_VERSION \
+  unzip
 ###
 # Retrieving Packer
 ###

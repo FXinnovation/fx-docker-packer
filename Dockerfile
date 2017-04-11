@@ -1,6 +1,7 @@
 FROM alpine:3.5
 
-ENV PACKER_VERSION=0.12.3
+ENV PACKER_VERSION=1.0.0 \
+    CURL_VERSION=7.52.1-r2
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -26,6 +27,7 @@ LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.vendor"="FXinnovation" \
       "org.label-schema.schema-version"="1.0.0-rc.1" \
       "org.label-schema.applications.packer.version"=$PACKER_VERSION \
+      "org.label-schema.applications.curl.version"=$CURL_VERSION \
       "org.label-schema.vcs-ref"=$VCS_REF \
       "org.label-schema.version"=$VERSION \
       "org.label-schema.build-date"=$BUILD_DATE \
