@@ -3,7 +3,7 @@ set -ex
 ###
 # Installing curl and unzip
 ###
-apk add --no-cache \
+apk add --update --no-cache \
   curl=$CURL_VERSION \
   unzip
 ###
