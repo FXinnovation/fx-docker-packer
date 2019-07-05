@@ -1,24 +1,27 @@
 #!/bin/sh
-set -ex
+
+set -x -eo pipefail
+
 ###
-# Installing curl and unzip
+# Installation
 ###
-apk add --no-cache \
-  curl=$CURL_VERSION \
-  unzip
-###
-# Retrieving Packer
-###
+
+apk add --no-cache curl=$CURL_VERSION unzip
 curl "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip" -o /tmp/packer.zip
-###
-# Unzip packer
-###
 unzip /tmp/packer.zip -d /usr/local/bin
+
 ###
-# Remove temporary files
+# Cleaning image
 ###
+
 rm -rf /tmp/*
-###
-# Remove unused programs
-###
 apk del unzip
+
+###
+# CIS Hardening
+###
+
+chmod 0600 /etc/shadow
+
+touch /etc/login.defs
+chmod 0444 /etc/login.defs
