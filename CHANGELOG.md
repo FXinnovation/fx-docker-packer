@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# x.x.x
+
+* chore: add pre-commit
+
 # 1.7.0
 
 * feat: bump packer to version `1.6.5`
