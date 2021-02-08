@@ -10,6 +10,8 @@ apk add --no-cache curl=$CURL_VERSION unzip
 curl "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip" -o /tmp/packer.zip
 unzip /tmp/packer.zip -d /usr/local/bin
 
+/usr/local/bin/packer version
+
 ###
 # Cleaning image
 ###
