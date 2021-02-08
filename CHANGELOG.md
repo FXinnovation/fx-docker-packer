@@ -1,7 +1,8 @@
 # CHANGELOG
 
-# x.x.x
+# 1.8.0
 
+* feat: bump packer to version `1.6.6`
 * maintenance: bump base image to `alpine:3.13.1`
 * maintenance: bump curl to version `7.74.0-r0`
 * chore: add pre-commit
