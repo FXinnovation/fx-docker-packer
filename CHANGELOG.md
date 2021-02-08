@@ -2,6 +2,8 @@
 
 # x.x.x
 
+* maintenance: bump base image to `alpine:3.13.1`
+* maintenance: bump curl to version `7.74.0-r0`
 * chore: add pre-commit
 
 # 1.7.0
