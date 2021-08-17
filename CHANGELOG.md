@@ -5,6 +5,7 @@
 * feat: pins packer version to `v1.7.4`
 * chore: pins alpine base image to `3.14.1`
 * chore: pins curl version to `7.78.0-r0`
+* chore: pins pre-commit-hooks to version `v4.0.1`.
 
 # 1.8.0
 
