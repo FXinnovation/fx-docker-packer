@@ -2,9 +2,9 @@
 
 # 1.9.0
 
+* feat: pins packer version to `v1.7.4`
 * chore: pins alpine base image to `3.14.1`
 * chore: pins curl version to `7.78.0-r0`
-* chore: pins packer version to `v1.7.4`
 
 # 1.8.0
 
